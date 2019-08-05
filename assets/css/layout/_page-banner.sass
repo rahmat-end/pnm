@@ -1,0 +1,33 @@
+.page-banner
+  // height: 677px
+  // height: calc(100vh - 120px)
+  position: relative
+  height: 85vh
+  @media (max-width: 991px)
+    height: 35vh
+  @media (max-width: 767px)
+    height: 300px
+  @media (max-width: 767px) and (orientation: landscape)
+    height: 400px
+  img
+    width: 100%
+    height: 100%
+    object-fit: cover
+    object-position: top center
+  .page-name
+    background: red
+    display: flex
+    align-items: center
+    // margin-top: -80px
+    position: absolute 
+    left: 0
+    right: 0
+    bottom: 0
+    background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 45%, rgba(255,255,255,0) 100%)
+    .title
+      font-size: 35px
+      color: #0066a0
+      font-weight: 600
+      padding: 10px 0
+      @media (max-width: 767px)
+        font-size: 20px

@@ -1,0 +1,115 @@
+//
+// News Sosmed Style
+//
+.news-sosmed
+  padding: 30px 0
+  @media (max-width: 767px)
+    padding-bottom: 0
+  .nav-tabs
+    border: none
+    justify-content: center
+    margin-bottom: 30px
+    a 
+      border: none
+      font-weight: 600
+      font-size: 30px
+      color: #333333
+      padding: 0 30px
+      @media (max-width: 767px)
+        font-size: 20px
+      &.active 
+        text-decoration: underline
+        color: #333333
+  .news-wrapper
+    display: flex
+    flex-wrap: wrap
+    padding: 0 9px 15px
+    @media (max-width: 767px)
+      padding: 0
+  .news
+    width: 33.33%
+    padding: 0 3px
+    margin-bottom: 10px
+    position: relative
+    @media (max-width: 991px)
+      width: 50%
+    @media (max-width: 767px)
+      width: 100%
+    &:first-child
+      width: 66.66%
+      @media (max-width: 991px)
+        width: 100%
+    &-thumb
+      height: 224px
+      border-radius: 12px
+      img
+        object-fit: cover
+        object-position: center center
+        filter: grayscale(100%)
+        transition: 0.3s
+
+    &-content 
+      position: absolute
+      left: 3px
+      right: 3px
+      bottom: 0
+      z-index: 1
+      padding: 20px
+      color: #ffffff
+      overflow: hidden
+      background: rgba(0, 0, 0, 0.6)
+      border-radius: 12px
+      height: 100%
+      display: flex
+      flex-direction: column
+      justify-content: flex-end
+      transition: 0.3s
+      @media (max-width: 1199px)
+        padding: 15px
+      @media (max-width: 767px)
+        height: 224px
+
+      .title
+        font-weight: bold
+        font-size: 18px
+        white-space: nowrap
+        overflow: hidden
+        text-overflow: ellipsis
+      .desc 
+        font-size: 14px
+
+    &:hover
+      img 
+        filter: grayscale(0)
+      .news-content
+        border-top-right-radius: 0
+        border-top-left-radius: 0
+
+  .link-more 
+    text-align: center
+    a
+      font-size: 18px
+      color: #006694
+      display: inline-block
+      text-decoration: none
+      &:hover
+        color: #87af3a
+
+  .sosmed-wrapper
+    .col-md-4
+      padding: 0 8px
+      @media (max-width: 767px)
+        margin-bottom: 30px
+        text-align: center
+        padding: 0 15px
+  .tab-content 
+    > .tab-pane
+      display: block
+      visibility: hidden
+      opacity: 0
+      height: 0
+      &.active.show
+        opacity: 1
+        visibility: visible
+        height: auto
+

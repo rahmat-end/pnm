@@ -1,0 +1,861 @@
+.page-content
+  padding: 60px 0
+  position: relative
+  overflow: hidden
+  @media (max-width: 767px)
+    padding: 30px 0
+  &:before
+    content: ''
+    width: 100%
+    height: 700px
+    background: image('page-content-bg.png')no-repeat
+    background-size: contain
+    background-position: 0 60px
+    position: absolute
+    left: 0
+    top: 0
+    z-index: -1
+    @media (max-width: 767px)
+      background-position: 0 30px
+  &:after
+    content: ''
+    width: 100%
+    height: 700px
+    background: image('page-content-bg.png')no-repeat
+    background-size: contain
+    background-position: 0 60px
+    position: absolute
+    right: 0
+    top: 200vh
+    transform: scaleX(-1)
+    opacity: 0.7
+    z-index: -1
+    @media (max-width: 767px)
+      background-position: 0 30px
+  .section
+    margin-bottom: 60px
+    font-size: 18px
+    line-height: 1.8
+    @media (max-width: 767px) 
+      margin-bottom: 0
+    img 
+      width: 100%
+    h3 
+      font-size: 29px
+      color: #0066a0
+      margin-top: 0
+      margin-bottom: 20px
+      text-transform: uppercase
+      @media (max-width: 767px)
+        font-size: 24px
+    h4 
+      color: #0066a0
+      font-weight: 600
+      @media (max-width: 767px)
+        font-size: 20px
+    h5
+      font-weight: normal
+      color: #0066a0
+    strong 
+      font-weight: 600
+      font-size: 18px
+      line-height: 1.8
+    ol 
+      padding-left: 10%
+      p 
+        margin-left: 20px
+    &.visi-content      
+      ul 
+        list-style: none 
+        margin: 0
+        padding: 0
+      li
+        margin-bottom: 30px
+        font-size: 18px
+        line-height: 1.8
+        padding-left: 30px
+        position: relative
+        &:before
+          content: ''
+          width: 12px
+          height: 12px
+          border-radius: 50%
+          background-color: #333333
+          position: absolute
+          left: 10px
+          top: 10px
+        &:after
+          content: ''
+          width: 8px
+          height: 8px
+          border-radius: 50%
+          border: 1px solid #ffffff
+          position: absolute
+          left: 12px
+          top: 12px
+
+  .direction-list
+    p
+      margin-bottom: 0
+    span
+      min-width: 400px
+      display: inline-block
+      @media (max-width: 767px)
+        min-width: auto
+        margin-right: 5px
+
+  .section-pnm-group
+    h3
+      text-transform: none
+      margin-bottom: 10px
+      font-size: 20px
+      font-weight: 600
+  .pnm-group-wrapper
+    .group
+      display: flex
+      align-items: center
+      @media (max-width: 767px)
+        flex-direction: column
+        .desc
+          text-align: center
+      &:nth-child(even)
+        flex-direction: row-reverse
+        @media (max-width: 767px)
+          flex-direction: column
+      .thumb 
+        flex: 0 0 205px
+        height: 205px
+        border-radius: 50%
+        border: 1px solid #0a67b1
+        padding: 10px
+        margin: 30px 70px
+        background-color: #fff
+        overflow: hidden
+        @media (max-width: 991px)
+          margin: 30px
+        @media (max-width: 767px)
+          flex: 0 0 100%
+          height: 100%
+          margin: 30px 40px
+
+  .list-wrapper
+    margin-bottom: 20px
+    .btn-link
+      text-align: left
+      width: 100%
+      background-color: #e5e5e5
+      color: #333333
+      text-decoration: none
+      font-size: 18px
+      padding: 13px 25px
+      padding-right: 70px
+      font-weight: 600
+      position: relative
+      white-space: normal
+      @media (max-width: 767px)
+        padding-left: 15px
+        padding-right: 40px
+      &:before
+        content: ''
+        width: 30px
+        height: 15px
+        mask: image('arrow.svg')no-repeat
+        background: #0066a4
+        mask-size: 100%
+        position: absolute
+        right: 35px
+        margin-top: 7px
+        @media (max-width: 767px)
+          right: 10px
+          width: 20px
+          height: 10px
+          margin-top: 11px
+      &[aria-expanded="true"]:before
+        transform: rotate(-180deg)
+
+    .list-body
+      padding: 30px
+      @media (max-width: 767px)
+        padding: 15px 0
+      .button-links
+        margin-top: 20px
+        .button-wrapper
+          display: flex
+          align-items: center
+          margin-bottom: 5px
+          @media (max-width: 767px)
+            flex-direction: column
+            align-items: flex-start
+          a 
+            color: #0066a4
+            border-color: #0066a4
+            padding: 0 20px
+            &:hover
+              color: #ffffff
+              border-color: #0066a4
+              background-color: #0066a4
+        p 
+          margin-bottom: 0
+          color: #0066a4
+          font-weight: 600
+          margin-left: 20px
+          @media (max-width: 767px)
+            margin-left: 0
+            margin-top: 10px
+
+  .section-row
+    margin: 0 -10px
+    @media (max-width: 767px)
+      margin: 0
+
+  .list-unduh
+    text-align: center
+    margin-bottom: 20px
+    &-wrapper
+      padding: 0 10px
+      @media (max-width: 767px)
+        padding: 0 15px
+    .thumb-wrapper
+      padding: 15px 15px 10px
+      background-color: #fff
+      box-shadow: 3px 3px 3px 0px rgba(0,0,0,0.2)
+      .thumb
+        box-shadow: 3px 3px 3px 0px rgba(0,0,0,0.2)
+        max-width: 90%
+        margin: auto
+      p 
+        margin: 5px 0 0
+        color: #0066a0
+        @media (max-width: 1199px)
+          font-size: 14px
+
+    .button-links
+      margin-top: 15px
+      .button-wrapper
+        display: flex
+        align-items: center
+        margin-bottom: 5px
+        justify-content: center
+        a 
+          color: #0066a4
+          border-color: #0066a4
+          padding: 0 30px
+          background-color: #fff
+          &:hover
+            color: #ffffff
+            border-color: #0066a4
+            background-color: #0066a4
+
+  .select-filter
+    text-align: center
+    margin-bottom: 30px
+
+  .select2 
+    width: 100%!important
+    max-width: 300px
+    text-align: left
+  .select2-container .select2-selection--single
+    height: 34px
+    border-radius: 0
+  .select2-container--default 
+    .select2-selection--single 
+      .select2-selection__rendered
+        line-height: 32px
+        padding-right: 30px
+      .select2-selection__arrow
+        height: 32px
+        width: 30px
+        background-color: #bfbfbf
+        b
+          border-color: #575757 transparent transparent transparent
+          border-width: 10px 6px 0 6px
+          margin-left: -6px
+          margin-top: -4px
+    &.select2-container--open 
+      .select2-selection--single 
+        .select2-selection__arrow 
+          b
+            border-color: transparent transparent #575757 transparent
+            border-width: 0 6px 10px 6px
+            margin-top: -6px
+
+  .select-filter-offices
+    text-align: center
+    .button-wrapper
+      justify-content: center
+    .address-select
+      margin-bottom: 40px
+    .radio-inline
+      [type="radio"]:checked ~ .checked:before, 
+      [type="radio"]:not(:checked) ~ .checked:before
+        background-color: transparent 
+        border: 1px solid #0066a0
+      [type="radio"]:checked ~ .checked:after, 
+      [type="radio"]:not(:checked) ~ .checked:after
+        background-color: #0066a0
+
+      img 
+        width: auto 
+        height: 34px
+        filter: grayscale(100%)
+      &.color-checked
+        img
+          filter: grayscale(0)
+
+    .select-wrapper
+      margin-bottom: 40px
+      .select2
+        margin-right: 30px
+        @media (max-width: 991px)
+          max-width: 250px
+          margin-bottom: 20px
+        @media (max-width: 767px)
+          margin-right: 0
+          max-width: 100%
+        &:last-child
+          margin-right: 0
+          
+  .button-links
+    margin-top: 15px
+    .button-wrapper
+      display: flex
+      align-items: center
+      margin-bottom: 5px
+      // justify-content: center
+      .btn-outline-primary 
+        color: #0066a4
+        border-color: #0066a4
+        padding: 0 30px
+        background-color: #fff
+        &:hover
+          color: #ffffff
+          border-color: #0066a4
+          background-color: #0066a4
+
+  .list-map-wrapper
+    width: 100%
+    display: flex
+    flex-wrap: wrap
+    margin-top: 30px
+    .col-md-4
+      display: flex
+      justify-content: center 
+      @media (max-width: 767px)
+        padding: 0
+
+    .list-map
+      font-size: 14px
+      max-width: 150px
+      margin-top: 40px
+      @media (max-width: 767px)
+        max-width: 100%
+      p 
+        margin-bottom: 5px
+    .map-link
+      color: #333333
+      font-size: 14px
+      display: inline-flex
+      align-items: center
+      text-decoration: none
+      i 
+        margin-right: 5px
+        color: #0066a4
+        font-size: 18px
+      &:hover
+        color: #0066a0
+        font-weight: bold
+  .dot-title
+    font-size: 18px
+    line-height: 1.8
+    padding-left: 20px
+    position: relative
+    font-weight: 600
+    &:before
+      content: ''
+      width: 10px
+      height: 10px
+      border-radius: 50%
+      background-color: #333333
+      position: absolute
+      left: 0
+      top: 11px
+    &:after
+      content: ''
+      width: 8px
+      height: 8px
+      border-radius: 50%
+      border: 1px solid #ffffff
+      position: absolute
+      left: 1px
+      top: 12px
+  b 
+    font-weight: 600
+
+  .ulamm-benefit
+    margin-top: 40px
+    .row
+      margin-top: 40px
+      > div 
+        margin-bottom: 20px
+    .embed-responsive-16by9::before
+      padding-top: 64.25%
+    .thumb 
+      border-radius: 12px
+      overflow: hidden
+      margin-bottom: 1rem
+      img 
+        object-fit: cover 
+        object-position: center center
+
+  .search-unit
+    margin-top: 40px
+    @media (max-width: 767px)
+      margin-top: 20px
+    img 
+      max-width: 180px
+    h5 
+      margin: 20px 0
+      @media (max-width: 767px)
+        font-size: 1.2rem
+    .button-wrapper
+      justify-content: center
+    .btn-outline-primary
+      padding: 0 30px
+      width: 100px
+  .mekaar-banner
+    margin: 50px 0
+    @media (max-width: 767px)
+      margin: 30px 0
+    .thumb
+      border-radius: 12px
+      overflow: hidden
+
+  .img-float
+    h4 
+      color: #333333
+    img 
+      width: 100%
+      max-width: 300px
+      float: left
+      margin-right: 30px
+      @media (max-width: 767px)
+        margin-right: 0
+        margin-bottom: 20px
+
+  .list-reksadana
+    .thumb-wrapper
+      .thumb
+        box-shadow: none
+
+  .list-komisaris
+    .thumb-wrapper
+      box-shadow: none
+      text-decoration: none
+      display: block
+      .thumb
+        box-shadow: none 
+        border-radius: 50%
+        overflow: hidden
+        max-width: 187px
+      h5 
+        color: #333333
+        font-size: 20px
+        margin-bottom: 0
+        margin-top: 10px
+      p 
+        margin: 0
+        font-size: 15px
+
+  .section-publikasi
+    .col-lg-8 
+      border-right: 1px solid #666666 
+      @media (max-width: 991px)
+        border: none
+  .blog-lists
+    .list
+      display: flex
+      margin-bottom: 30px
+      @media (max-width: 767px)
+        display: block
+    .thumb
+      border-radius: 12px
+      overflow: hidden
+      max-width: 318px
+      flex: 0 0 100%
+      img 
+        width: 100%
+        height: 100%
+        object-fit: cover
+        object-position: top center
+    .desc
+      padding: 0 15px
+      @media (max-width: 991px)
+        padding-right: 0
+      @media (max-width: 767px)
+        padding: 0
+        margin-top: 15px
+      .title
+        line-height: 1.2
+      .date
+        font-size: 12px
+        text-decoration: underline
+        margin: 10px 0
+      p 
+        font-size: 14px
+      a 
+        text-transform: uppercase
+        color: #136ca8
+        display: inline-flex
+        font-size: 10px
+        align-items: center
+        text-decoration: none
+
+        &:after
+          content: ''
+          width: 6px
+          height: 6px
+          border-right: 1px solid  #136ca8
+          border-top: 1px solid  #136ca8
+          display: inline-block 
+          transform: rotate(45deg)
+          
+          transition: 0.3s
+          margin-left: 3px
+        &:hover
+          text-decoration: underline
+
+  .detail-list
+    .thumb
+      border-radius: 12px
+      overflow: hidden
+      img 
+        width: 100%
+        height: 100%
+        object-fit: cover
+        object-position: top center
+    .title
+      line-height: 1.2
+      margin-top: 30px
+    .date
+      font-size: 12px
+      text-decoration: underline
+      margin: 10px 0
+    p 
+      font-size: 14px
+
+  .pagination-wrapper
+    margin-top: 60px
+    @media (max-width: 767px)
+      margin-top: 30px
+    .pagination
+      margin: 0
+      justify-content: center
+      a 
+        border: none
+        &:hover
+          background-color: transparent
+  
+  .widget-wrapper
+    padding: 0 15px
+    @media (max-width: 991px)
+      margin-top: 30px
+      padding: 0
+      .list-wrapper
+        display: flex
+        margin: 0 -15px
+        @media (max-width: 767px)
+          margin: 0
+          display: block
+        .list 
+          padding: 0 15px
+          flex: 0 0 33,3333%
+          margin-bottom: 30px
+          @media (max-width: 767px)
+            flex: 0 0 100%
+            padding: 0
+    h3 
+      color: #1a1a1a
+      font-weight: 600
+      text-transform: none
+    .thumb
+      border-radius: 12px
+      overflow: hidden
+      flex: 0 0 100%
+      img 
+        width: 100%
+        height: 100%
+        object-fit: cover
+        object-position: top center
+    .desc
+      .title
+        line-height: 1.2
+        margin-top: 15px
+
+      .date
+        font-size: 12px
+        text-decoration: underline
+        margin: 10px 0
+      p 
+        font-size: 14px
+      a 
+        text-transform: uppercase
+        color: #136ca8
+        display: inline-flex
+        font-size: 10px
+        align-items: center
+        text-decoration: none
+
+        &:after
+          content: ''
+          width: 6px
+          height: 6px
+          border-right: 1px solid  #136ca8
+          border-top: 1px solid  #136ca8
+          display: inline-block 
+          transform: rotate(45deg)
+          
+          transition: 0.3s
+          margin-left: 3px
+        &:hover
+          text-decoration: underline
+
+  .form-search
+    text-align: center
+    padding-bottom: 30px
+    border-bottom: 1px solid #8e8e8e
+    @media (max-width: 767px)
+      padding-bottom: 10px
+    .form-inline
+      border: 1px solid #8e8f8f
+      border-radius: 2px
+      display: inline-flex
+
+    input
+      padding-right: 42px
+      padding-left: 0.75rem
+      margin: 0
+    button 
+      right: 0
+      left: auto
+
+    img 
+      width: 20px
+
+  .search-list
+    .list 
+      padding: 60px 0
+      border-bottom: 1px solid #8e8e8e
+      @media (max-width: 767px)
+        padding: 30px 0
+      &:last-child
+        border-bottom: none
+      &-inner
+        max-width: 60%
+        @media (max-width: 991px)
+          max-width: 100%
+      .title
+        color: #006693
+        text-decoration: none
+        font-weight: 600
+      &-tag 
+        color: #8e8e8e
+        font-size: 14px
+        display: flex
+        align-items: center 
+        line-height: 1
+        margin-top: 20px
+        .lang 
+          margin-left: 15px
+          display: inline-block
+          img 
+            width: 14px
+      .desc
+        color: #333333
+        font-size: 14px
+        margin-top: 15px
+
+  .search-not-found
+    text-align: center
+    padding-top: 120px
+    @media (max-width: 767px)
+      padding-top: 40px
+
+  .col-md-11
+    position: static
+    @media (max-width: 767px)
+      position: relative
+
+  .jobs-title
+    padding-bottom: 30px
+    @media (max-width: 767px)
+      border-bottom: 1px solid #cccccc
+    &:after
+      content: ''
+      width: calc(100vw - 60px)
+      height: 1px
+      background-color: #cccccc 
+      position: absolute
+      right: 0
+      left: 0
+      margin: 30px auto 0
+      @media (max-width: 767px)
+        display: none
+    p 
+      margin-bottom: 0
+
+  .job-not-found
+    padding-top: 60px
+    @media (max-width: 767px)
+      padding-top: 30px
+    p
+      margin: 0
+  
+  .list-jobs
+    .list
+      padding-bottom: 30px
+      padding-top: 60px
+      &:last-child:after
+        display: none
+      @media (max-width: 767px)
+        border-bottom: 1px solid #cccccc
+        padding-top: 30px
+        &:last-child
+          border-bottom: none
+      &:after
+        content: ''
+        width: calc(100vw - 60px)
+        height: 1px
+        background-color: #cccccc 
+        position: absolute
+        right: 0
+        left: 0
+        margin: 30px auto 0
+        @media (max-width: 767px)
+          display: none
+  .list-desc
+    display: flex
+    margin-bottom: 20px
+    @media (max-width: 767px)
+      flex-direction: column
+    .title
+      flex: 0 0 270px
+      font-weight: bold
+      position: relative
+      margin-right: 10px
+      @media (max-width: 767px)
+        flex: auto
+        margin-right: 0
+      &:after
+        content: ':'
+        position: absolute
+        right: 0
+        @media (max-width: 767px)
+          position: relative
+    .content
+      flex: 1
+
+  .lelang-detail
+    h2
+      font-weight: bold
+      font-size: 28px
+      @media (max-width: 767px)
+        font-size: 24px
+    .job-wrapper
+      margin-top: 50px
+      @media (max-width: 767px)
+        margin-top: 30px
+      h3 
+        font-weight: bold
+        font-size: 25px
+        @media (max-width: 767px)
+          font-size: 20px
+    .list-desc
+      .title
+        flex: 0 0 300px
+        @media (max-width: 767px)
+          flex: auto
+    .button-links 
+      margin-top: 5px
+
+    .content 
+      [type="file"]
+        opacity: 0
+        position: absolute
+        left: 0
+        top: 0
+        width: 100%
+        height: 100%
+        z-index: 1
+        cursor: pointer
+      .upload-content
+        color: #0066a4
+        border: 1px solid #0066a4
+        padding: 0 10px
+        background-color: #fff
+        display: inline-block
+        border-radius: 0.25rem
+        text-align: center
+        width: 155px
+        height: 66px
+        position: relative
+        transition: 0.3s
+        &:hover
+          color: #ffffff
+          background-color: #0066a4
+
+      ul 
+        padding-left: 20px
+      input 
+        padding: 0 10px
+        height: 33px
+        border: 1px solid #e1dedf
+
+    .button-submit
+      margin: 40px 0
+      padding-left: 300px
+      @media (max-width: 767px)
+        margin: 30px 0 
+        padding-left: 0
+      .btn-outline-primary
+        color: #0066a4
+        border-color: #0066a4
+        padding: 0 40px
+        background-color: #fff
+        font-weight: bold
+        font-size: 25px
+    .ttd 
+      font-weight: bold
+      margin-top: 40px
+
+.display-reksadana
+  h3
+    margin: 10px 0 0
+    color: #0066a0
+    text-align: center
+.display-direksi
+  .thumb-wrapper
+    position: relative
+  .direksi-desc
+    background: linear-gradient(90deg, white 0%, white 45%, rgba(255, 255, 255, 0) 100%)
+    padding: 0 30px
+    position: absolute
+    bottom: 0
+    left: 0
+    right: 0
+    padding: 10px 30px
+    @media (max-width: 480px)
+      padding: 10px 15px
+    h3
+      margin: 0
+      @media (max-width: 480px)
+        font-size: 1.3rem
+    p
+      color: #0066a0
+      font-size: 20px
+      margin: 0
+      @media (max-width: 480px)
+        font-size: 18px
+  p 
+    margin-top: 20px
+    margin-bottom: 0
+

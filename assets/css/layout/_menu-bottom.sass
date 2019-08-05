@@ -1,0 +1,28 @@
+//
+// Menu Bottom Style
+//
+.menu-bottom
+  background-color: #006694
+  border-bottom: 1px solid #ffffff
+  padding: 30px 0 20px;
+  &-inner
+    display: flex
+    flex-wrap: wrap
+  ul
+    padding: 0
+    margin: 0
+    list-style: none
+    flex: 25%
+    @media (max-width: 991px)
+      flex: 50%
+    @media (max-width: 767px)
+      flex: 100%
+    li 
+      margin-bottom: 10px
+    a 
+      color: #ffffff
+      font-size: 14px
+      text-decoration: none
+      &:hover 
+        color: #87af3a
+        font-weight: bold

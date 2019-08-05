@@ -1,0 +1,61 @@
+.history-content
+  ul 
+    list-style: none 
+    padding: 0
+    margin: 0
+    position: relative
+    
+    li 
+      display: flex
+      align-items: flex-start
+      margin-bottom: 35px
+      position: relative
+      @media (max-width: 767px)
+        flex-direction: row
+        flex-wrap: wrap
+      &:before
+        content: ''
+        width: 2px
+        height: calc(100% + 10px)
+        background-color: #0066a0
+        position: absolute
+        bottom: 0
+        top: 35px
+        left: 101px
+        right: 0
+        @media (max-width: 767px)
+          display: none
+      &:last-child:before
+        display: none
+
+      &:first-child
+        .image-separator:before
+          display: none
+      p 
+        margin-bottom: 0
+        line-height: 2
+        @media (max-width: 767px)
+          flex: 100%
+          margin-top: 10px
+      .years
+        font-weight: bold
+        font-size: 25px
+        width: 55px
+  .history-years
+    .image-separator
+      position: relative
+      flex: 0 0 45px
+      margin: 0 25px
+      
+      img 
+        width: 100%
+        position: relative
+        z-index: 1
+    
+.history-desc
+  p 
+    line-height: 2
+  b 
+    color: #0066a0
+    font-weight: 600
+    

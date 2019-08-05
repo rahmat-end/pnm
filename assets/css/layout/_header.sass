@@ -1,0 +1,534 @@
+//
+// Header Style
+//
+.header
+  background-color: #ffffff
+  display: flex
+  position: fixed
+  z-index: 10
+  width: 100%
+  // height: 80px
+  // padding: 10px 0 5px
+  // border-bottom: 2px solid transparent
+  box-shadow: 0 1px 6px 0 rgba(32, 33, 36, 0.28)
+  > .container
+    height: 80px
+  &:before,
+  &:after
+    content: ''
+    height: 5px
+    position: absolute
+    top: 0
+  &:before
+    background-color: #93bb3a
+    left: -5px
+    transform: skewX(-45deg)
+    z-index: 1
+    width: 30%
+    @media (max-width: 767px)
+      width: 40%
+  &:after
+    width: 100%
+    right: 0
+    background-color: #0066a0
+  ul 
+    list-style: none
+    margin: 0 
+    padding: 0
+    a 
+      color: #006694
+
+  .container
+    display: flex
+    align-items: center
+    
+  .logo 
+    max-width: 101px
+    flex: 1
+    z-index: 999
+    // @media (max-width: 575px)
+    //   max-width: 50px
+    // img 
+    //   width: 70px
+    //   @media (max-width: 575px)
+    //     width: 50px
+  
+  .menu-navigation
+    flex: 1
+    height: 100%
+    justify-content: space-between
+    li 
+      display: inline-block
+      padding-left: 40px
+      height: 100%
+      @media (max-width: 991px)
+        height: auto
+      &:first-child
+        padding-left: 0
+      a 
+        display: flex
+        align-items: center
+        font-size: 14px
+        position: relative
+        text-decoration: none
+        // &:before
+        //   content: ""
+        //   width: 100%
+        //   height: 2px
+        //   background-color: #fff
+        //   position: absolute
+        //   bottom: 40px
+        //   opacity: 0
+        //   transition: 0.3s
+        //   @media (max-width: 991px)
+        //     display: none
+        &:hover
+          // color: #87af3a
+          text-decoration: underline
+        //   &:before
+        //     opacity: 1
+        // &.active:before
+        //   opacity: 1
+  .language
+    margin-right: 20px
+    @media (max-width: 991px)
+      display: none
+    li 
+      padding-left: 15px
+    a 
+      img 
+        width: 14px
+        margin-right: 5px
+  .mobile-language
+    display: none
+    @media (max-width: 991px)
+      display: flex
+      flex: 1
+      justify-content: flex-end
+      margin-right: 10px
+  .main-menu
+    flex: 1
+    display: flex
+    justify-content: center
+
+    .dropdown
+      display: flex
+      height: 100%
+      @media (max-width: 991px)
+        flex-direction: column
+
+      &:hover 
+        > ul,
+        > .dropdown-menu
+          display: block
+          @media (max-width: 991px)
+            display: none
+        > .btn-default
+          text-decoration: underline
+        .dropdown-toggle
+          &:before
+            content: ''
+            width: 0
+            height: 0
+            border-style: solid
+            border-width: 0 10px 15px 10px
+            border-color: transparent transparent #006694 transparent
+            position: absolute
+            bottom: 0
+            left: 50%
+            transform: translateX(-50%)
+            z-index: 1
+            @media (max-width: 991px)
+              display: none
+          &:after
+            opacity: 1
+          
+
+      &.show
+        > .btn-default
+          text-decoration: underline
+        .dropdown-toggle
+          &:before
+            content: ''
+            width: 0
+            height: 0
+            border-style: solid
+            border-width: 0 10px 15px 10px
+            border-color: transparent transparent #006694 transparent
+            position: absolute
+            bottom: 0
+            left: 50%
+            transform: translateX(-50%)
+            z-index: 1
+            @media (max-width: 991px)
+              display: none
+          &:after
+            opacity: 1
+
+      &.full-width-menu
+        position: static
+
+        .container
+          align-items: flex-start
+          @media (max-width: 991px)
+            padding: 0
+            display: block
+        .dropdown-menu
+          left: 0
+          right: 0
+          width: 100vw
+          margin: 0
+          transform: translateX(0)!important
+          top: 100%!important
+          @media (max-width: 991px)
+            width: auto 
+            // transform: translate3d(0, 0, 0)!important
+          
+          a 
+            flex: 1
+            display: flex
+            flex-direction: column
+            align-items: flex-start
+            justify-content: flex-start
+            padding: 15px
+            @media (max-width: 991px)
+              border-bottom: 1px solid #ffffff
+              padding: 15px 0
+            &:hover 
+              text-decoration: underline
+              color: #006694
+            .thumb
+              border-radius: 12px
+              overflow: hidden
+              @media (max-width: 991px)
+                display: none
+            span 
+              font-weight: 600
+              font-size: 10px
+              margin-top: 5px
+            p 
+              // margin-top: 15px
+              margin-bottom: 0
+              @media (max-width: 991px)
+                margin: 0
+
+    .dropdown-menu
+      border: none
+      border-radius: 0
+      background-color: rgba(255, 255, 255, 0.8)
+      // margin-top: 7px
+      padding: 10px 0
+      @media (max-width: 991px)
+        position: relative!important
+        transform: translate3d(0, 0, 0)!important
+        margin: 0
+        width: 100%
+        background-color: transparent
+        padding: 0
+        padding-left: 15px
+
+      .dropdown-submenu 
+        a
+          text-decoration: none
+        &.show
+          > a 
+            text-decoration: underline
+
+      li 
+        padding: 5px 15px
+        display: block
+        @media (max-width: 991px)
+          padding: 0
+          display: flex
+          flex-direction: column
+          a 
+            padding: 15px 0
+            border-bottom: 1px solid #ffffff
+
+      .dropdown-submenu
+        &:hover
+          > ul 
+            display: block
+            @media (max-width: 991px)
+              display: none
+        > a
+          &:after
+            content: ''
+            width: 8px
+            height: 8px
+            border-right: 1px solid  #136ca8
+            border-top: 1px solid  #136ca8
+            display: inline-block 
+            transform: rotate(45deg)
+            margin-top: -1px
+            transition: 0.3s
+            margin-left: 3px
+            @media (max-width: 991px)
+              position: absolute
+              border-color: #ffffff
+              transform: rotate(135deg)
+              right: 15px
+          &:hover
+            text-decoration: underline
+        > .dropdown-menu
+          margin: 0
+          top: 0
+          left: 100%
+          min-width: 12rem
+          @media (max-width: 991px)
+            left: auto 
+            min-width: auto
+            padding-left: 15px
+
+    .btn-default
+      padding: 0
+      color: #006694
+      display: flex
+      align-items: center
+      font-size: 14px
+      position: relative
+      text-decoration: none
+      border: none
+      background-color: transparent
+      border-radius: 0
+      
+      &:focus
+        box-shadow: none
+      &:after 
+        content: ''
+        width: 100vw
+        height: 2px
+        background-color: #006694
+        position: fixed
+        top: 78px
+        left: 0
+        margin: 0
+        border: 0
+        opacity: 0
+        @media (max-width: 991px)
+          content: ''
+          width: 8px
+          height: 8px
+          border: none
+          border-right: 1px solid #ffffff
+          border-bottom: 1px solid #ffffff
+          display: inline-block
+          margin-top: -3px
+          position: absolute
+          transform: rotate(45deg) translateY(-50%)
+          top: 50%
+          right: 15px
+          left: auto
+          opacity: 1
+          background-color: transparent
+  
+
+
+  a 
+    color: #ffffff
+    display: inline-block
+    height: 100%
+    font-size: 14px
+    &:hover
+      text-decoration: underline
+  
+  .burger
+    display: none
+
+
+  @media (max-width: 991px)
+    .dropdown-menu.show,
+      display: block!important
+    .dropdown-submenu.show
+      display: flex
+      flex-direction: column
+
+    .burger
+      background-color: transparent
+      border-radius: 50%
+      border: none
+      cursor: pointer
+      display: block
+      height: 60px
+      padding: 0
+      position: relative
+      width: 56px
+      z-index: 1000
+      transition: all 300ms ease-out
+      outline: none
+      margin-right: -10px
+      
+    .burger-wrapper
+      position: absolute
+      width: 100%
+      height: 100%
+      top: 0
+      left: 0
+
+    .x,
+    .y,
+    .z
+      position: absolute
+      margin: auto
+      top: 0px
+      bottom: 16px
+      left: 0
+      right: 0
+      background: #026594
+      transition: all 200ms ease-out
+
+    .x,
+    .y,
+    .z
+      width: 35px
+      height: 4px
+
+    .y
+      top: 18px
+
+    .z
+      top: 35px
+
+    .collapse-icon
+      background: #ffffff
+      top: 17px
+      width: 30px
+      transition: all 70ms ease-out
+
+    .rotate30
+      transform: rotate(30deg)
+      transition: all 50ms ease-out
+
+    .rotate150
+      transform: rotate(150deg)
+      transition: all 50ms ease-out
+
+    .rotate45
+      transform: rotate(45deg)
+      transition: all 100ms ease-out
+
+    .rotate135
+      transform: rotate(135deg)
+      transition: all 100ms ease-out
+
+    .menu-bg
+      width: 100%
+      height: 100%
+      position: fixed
+      top: 0
+      left: 0
+      background-color: #000000
+      z-index: 100
+      opacity: 0
+      visibility: hidden
+      transition: all 300ms cubic-bezier(0.000, 0.995, 0.990, 1.000)
+
+    .menu-bg.animate
+      opacity: 0.9
+      visibility: visible
+      transition: all 400ms cubic-bezier(0.000, 0.995, 0.990, 1.000)
+
+    .menu-navigation
+      width: 100%
+      max-width: 720px
+      padding: 0 15px 15px
+      opacity: 0
+      visibility: hidden
+      animation-name: zoomOut
+      animation-duration: .3s
+      position: absolute
+      z-index: 102
+      display: block
+      left: 0
+      right: 0
+      margin: auto
+      height: auto
+      top: 80px
+      display: flex
+      flex-direction: column-reverse
+
+
+    @-webkit-keyframes zoomOut
+      from
+        opacity: 1
+    
+      50%
+        opacity: 0
+        transform: scale3d(.3, .3, .3)
+    
+      to
+        opacity: 0
+    
+
+    @keyframes zoomOut
+      from
+        opacity: 1
+    
+      50%
+        opacity: 0
+        transform: scale3d(.3, .3, .3)
+    
+      to
+        opacity: 0
+    
+
+    .menu-navigation.animate
+      animation-name: zoomIn
+      animation-duration: .4s
+      opacity: 1
+      visibility: visible
+
+    @-webkit-keyframes zoomIn
+      from
+        opacity: 0
+        transform: scale3d(.3, .3, .3)
+    
+      50%
+        opacity: 1
+    
+
+    @keyframes zoomIn
+      from
+        opacity: 0
+        transform: scale3d(.3, .3, .3)
+    
+      50%
+        opacity: 1
+
+    ul.main-menu
+      display: block
+      top: auto
+      transform: translateY(0)
+      height: 70vh
+      overflow: auto
+      flex: auto
+      justify-content: flex-start
+      padding-bottom: 10px
+      a
+        color: #ffffff
+        text-decoration: none!important
+      .btn-default
+        display: block
+        margin: 0
+        border-bottom: 1px solid #ffffff
+        width: 100%
+        padding: 15px 0
+        text-align: left
+        color: #ffffff
+        text-decoration: none
+
+    ul.main-menu li
+      display: block
+      padding: 0
+
+    ul.main-menu>li>a
+    
+      display: block
+      margin: 0
+      padding: 15px 0
+      border-bottom: 1px solid #ffffff
+    ul.main-menu 
+      
+  @media (max-width: 767px)
+    .menu-navigation
+      max-width: 540px

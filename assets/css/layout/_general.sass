@@ -1,0 +1,116 @@
+body 
+  font-family: 'Myriad Pro'
+  color: #333333
+a 
+  transition: 0.3s
+  outline: none
+img 
+  max-width: 100%
+.main
+  padding-top: 80px
+  min-height: 100vh
+[type="radio"]:checked,
+[type="radio"]:not(:checked)
+  display: none
+
+[type="radio"]:checked + .checked,
+[type="radio"]:not(:checked) + .checked
+  position: relative
+  width: 12px
+
+[type="radio"]:checked + .checked:before,
+[type="radio"]:not(:checked) + .checked:before
+  content: ''
+  position: absolute
+  left: 0
+  top: 0
+  width: 12px
+  height: 12px
+  border-radius: 100%
+  background: #fff
+
+[type="radio"]:checked + .checked:after,
+[type="radio"]:not(:checked) + .checked:after
+  content: ''
+  width: 8px
+  height: 8px
+  background: #666666
+  position: absolute
+  top: 2px
+  left: 2px
+  border-radius: 100%
+  -webkit-transition: all 0.2s ease
+  transition: all 0.2s ease
+
+[type="radio"]:not(:checked) + .checked:after
+  opacity: 0
+  -webkit-transform: scale(0)
+  transform: scale(0)
+
+[type="radio"]:checked + .checked:after
+  opacity: 1
+  -webkit-transform: scale(1)
+  transform: scale(1)
+
+\:focus
+  outline: none
+
+.sosmed-wrapper
+  @media (max-width: 767px)
+    .col-md-4
+      margin-bottom: 30px
+.sosmed-title
+  display: flex
+  background: #006691
+  color: #ffffff
+  padding: 10px 15px
+  align-items: center 
+  font-size: 14px
+  justify-content: space-between
+  .title-left
+    display: flex
+    align-items: center
+  i 
+    font-size: 18px
+    margin-right: 10px
+  a 
+    color: #ffffff
+    text-decoration: none
+    font-size: 14px
+    flex: none
+
+.form-inline
+  position: relative
+  @media (max-width: 991px)
+    margin-bottom: 15px
+    .form-control
+      margin: 0
+  input.form-control
+    border-radius: 30px
+    text-align: center
+    width: 200px
+    border: none
+    margin-left: 20px
+    padding-left: 42px
+    height: 33px
+    background-color: #f7f7f7
+    border-radius: 2px
+    @media (max-width: 991px)
+      width: 100%
+      text-align: left
+      height: 45px
+      margin-left: 0
+    &:focus
+      box-shadow: none
+  button 
+    background-color: transparent
+    position: absolute
+    left: 20px
+    padding: 0 10px
+    height: 33px
+    @media (max-width: 991px)
+      left: 0
+    &:focus
+      box-shadow: none
+  img 
+    width: 20px

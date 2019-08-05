@@ -1,0 +1,47 @@
+//
+// Modal Style
+//
+.modal
+  &-content
+    padding: 0
+    border-radius: 0
+    border: none
+    max-width: 90vw
+    margin: auto
+  .modal-dialog
+    transition: 0.2s ease-out 
+    margin: 30px auto
+  &.fade 
+    .modal-dialog
+      top: 5vh
+      transform: scale(0.5) 
+
+  &.fade.show
+    .modal-dialog
+      transform: scale(1) 
+      opacity: 1
+
+.modal-close
+  outline: none
+  position: relative
+  right: 0
+  top: 0
+  z-index: 999
+  font-size: 2rem
+  font-weight: normal
+  color: #a6a6a6
+  opacity: 1
+  background-color: transparent
+  padding: 0
+  border: 0
+  line-height: 1
+  cursor: pointer
+  background-color: transparent
+  display: block
+  float: right
+  margin-top: -10px
+  margin-bottom: 10px
+  span 
+    line-height: 1
+  &:focus
+    outline: none
